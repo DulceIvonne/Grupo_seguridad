@@ -11,47 +11,48 @@
 <body class="hidden">
     <div class="centrado" id="onload">
     <div class="lds-facebook"><div></div><div></div><div></div></div>
-     </div>
-     <header>
-         <nav id="nav" class="nav1">
-             <div class="contenedor-nav">
-                 <div class="logo">
-                     <img src="img/logo1.png" alt="">
-                 </div>
-                 <div class="enlaces" id="enlaces">
-                     <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
-                     <a href="#" id="enlace-acerca" class="btn-header">Acerca de</a>
-                     <a href="#" id="enlace-servicios" class="btn-header">Servicio</a>
-                     <a href="#" id="enlace-trabajo" class="btn-header">Trabajo</a>
-                     <a href="#" id="enlace-cursos" class="btn-header">Curso</a>
-                     <a href="#" id="enlace-tienda" class="btn-header">Tienda</a>
-                     <a href="#" id="enlace-contacto" class="btn-header">Redes Sociales</a>
-             </div>
-             <div class="icono" id="open">
-                 <span>&#9776;</span>
-             </div>
+        </div>
+        <header>
+            <nav id="nav" class="nav1">
+                <div class="contenedor-nav">
+                    <div class="logo">
+                        <img src="img/logo1.png" alt="">
+                    </div>
+                    <div class="enlaces" id="enlaces">
+                        <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                        <a href="#" id="enlace-acerca" class="btn-header">Acerca de</a>
+                        <a href="#" id="enlace-servicios" class="btn-header">Servicio</a>
+                        <a href="#" id="enlace-trabajo" class="btn-header">Trabajo</a>
+                        <a href="#" id="enlace-cursos" class="btn-header">Curso</a>
+                        <a href="#" id="enlace-tienda" class="btn-header">Tienda</a>
+                        <a href="#" id="enlace-contacto" class="btn-header">Redes Sociales</a>
+                        <a href="login.php" id="enlace-contacto" class="btn-header">Cuenta</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
             </div>
-         </nav>
-         <div class="textos">
-             <h1>Grupo 4 IO Seguridad Industrial</h1>
-             <h2>Empresa 100% Mexicana, dedicada a la capacitación en Seguridad Industrial</h2>
-         </div>
-     </header>
-     <main>
-         <section class="team contenedor" id="acerca">
-             <h3>Acerca de nosotros</h3>
-             <p class="after">Capacitate con la mejor Empresa</p>
-             <div class="card">
-                 <div class="content-card">
-                     <div class="people">
-                         <img src="img/acerca1.png"alt="">
-                     </div>
-                     <div class="texto-team">
-                         <h4>K</h4>
-                         <P>Lorem ipsum dolor sit.</P>
-                     </div>
-                 </div>
-                 <div class="content-card">
+            </nav>
+            <div class="textos">
+                <h1>Grupo 4 IO Seguridad Industrial</h1>
+                <h2>Empresa 100% Mexicana, dedicada a la capacitación en Seguridad Industrial</h2>
+            </div>
+        </header>
+        <main>
+            <section class="team contenedor" id="acerca">
+                <h3>Acerca de nosotros</h3>
+                <p class="after">Capacitate con la mejor Empresa</p>
+                <div class="card">
+                    <div class="content-card">
+                        <div class="people">
+                            <img src="img/acerca1.png"alt="">
+                        </div>
+                        <div class="texto-team">
+                            <h4>K</h4>
+                            <P>Lorem ipsum dolor sit.</P>
+                        </div>
+                    </div>
+                    <div class="content-card">
                     <div class="people">
                         <img src="img/acerca2.png"alt="">
                     </div>
