@@ -86,7 +86,7 @@ header{
   rgba(30, 33, 209, 0.6),
   rgba(29, 173, 29, 0.6),
   rgba(254, 0, 10, 0.781)
-  ), url(../img/inicio.png);
+  ), url(../img/logo1.png);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -222,6 +222,7 @@ nav .enlaces a:hover{
   height: 20%;
   width: 100%;
   padding: var(--espacios) 0;
+  background-color: #6fa84b;/**/
 }
 
 .about{

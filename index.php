@@ -24,7 +24,7 @@
                         <a href="#" id="enlace-servicios" class="btn-header">Servicio</a>
                         <a href="#" id="enlace-trabajo" class="btn-header">Trabajo</a>
                         <a href="#" id="enlace-cursos" class="btn-header">Curso</a>
-                        <a href="#" id="enlace-tienda" class="btn-header">Tienda</a>
+                        <a href="tienda.php" id="enlace-tienda" class="btn-header">Tienda</a>
                         <a href="#" id="enlace-contacto" class="btn-header">Redes Sociales</a>
                         <a href="login.php" id="enlace-contacto" class="btn-header">Cuenta</a>
                 </div>
@@ -45,29 +45,29 @@
                 <div class="card">
                     <div class="content-card">
                         <div class="people">
-                            <img src="img/acerca1.png"alt="">
+                            <img src="img/prevencion.jpg"alt="">
                         </div>
                         <div class="texto-team">
-                            <h4>K</h4>
-                            <P>Lorem ipsum dolor sit.</P>
+                            <h4>Prevención de lesiones de trabajo</h4>
+                            <P>Trabajos en alturas.</P>
                         </div>
                     </div>
                     <div class="content-card">
                     <div class="people">
-                        <img src="img/acerca2.png"alt="">
+                        <img src="img/residuos.jpg"alt="">
                     </div>
                     <div class="texto-team">
-                        <h4>C</h4>
-                        <P>Lorem ipsum dolor sit.</P>
+                        <h4>Al cuidado de tu personal</h4>
+                        <P>Manejo de residuos peligrosos.</P>
                     </div>
                 </div>
                 <div class="content-card">
                     <div class="people">
-                        <img src="img/acerca3.png"alt="">
+                        <img src="img/proteccion.jpg"alt="">
                     </div>
                     <div class="texto-team">
-                        <h4>M</h4>
-                        <P>Lorem ipsum dolor sit.</P>
+                        <h4>Somos líderes</h4>
+                        <P>Equipos de protección.</P>
                     </div>
                 </div>
              </div>
@@ -80,17 +80,14 @@
                      <div class="caja-servicios">
                          <img src="img/Chaleco_4IO.png" alt="">
                          <h4>Detección de riesgos laborales</h4>
-                         <p>Lorem ipsum dolor sit amet consectetur.</p>
                      </div>
                      <div class="caja-servicios">
                         <img src="img/Asesoria_4IO.png" alt="">
-                        <h4>Asesoría técnica en seguridad industrial y ergonomía</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <h4>Asesoría técnica en seguridad, salud y medio ambiente</h4>
                     </div>
                     <div class="caja-servicios">
                         <img src="img/Cursos_4IO.png" alt="">
-                        <h4>Curso de capacitación</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <h4>Cursos de capacitación</h4>
                     </div>
                  </div>
              </div>
@@ -109,39 +106,31 @@
              <div class="galeria-work">
                  <div class="cont-work equipo">
                      <div class="img-work">
-                         <img src="img/proyecto1.png"alt="">
+                         <img src="img/solares.jpg"alt="">
                      </div>
                      <div class="textos-work">
-                         <h4>Proyecto de Celdas Solares</h4>
+                         <h4>Proyectos</h4>
                      </div>
                  </div>
                  <div class="cont-work equipo">
                     <div class="img-work">
-                        <img src="img/proyecto2.png"alt="">
+                        <img src="img/andamios.jpg"alt="">
                     </div>
                     <div class="textos-work">
-                        <h4>Proyecto Xcala</h4>
+                        <h4>Proyectos</h4>
                     </div>
                 </div>
                 <div class="cont-work equipo">
                     <div class="img-work">
-                        <img src="img/proyecto3.png"alt="">
+                        <img src="img/celdas.jpg"alt="">
                     </div>
                     <div class="textos-work">
-                        <h4>Proyecto con Grupo ALYEX</h4>
+                        <h4>Proyectos</h4>
                     </div>
                 </div>
                 <div class="cont-work cursos">
                     <div class="img-work">
-                        <img src="img/capacitacion1.png"alt="">
-                    </div>
-                    <div class="textos-work">
-                        <h4>Los 12 Principios Ergonómicos</h4>
-                    </div>
-                </div>
-                <div class="cont-work cursos">
-                    <div class="img-work">
-                        <img src="img/capacitacion2.png"alt="">
+                        <img src="img/materiales.jpg"alt="">
                     </div>
                     <div class="textos-work">
                         <h4>Capacitaciones</h4>
@@ -149,15 +138,23 @@
                 </div>
                 <div class="cont-work cursos">
                     <div class="img-work">
-                        <img src="img/capacitacion3.png"alt="">
+                        <img src="img/mantenimiento.jpg"alt="">
                     </div>
                     <div class="textos-work">
-                        <h4>Capacitando DC-3</h4>
+                        <h4>Capacitaciones</h4>
+                    </div>
+                </div>
+                <div class="cont-work cursos">
+                    <div class="img-work">
+                        <img src="img/genie.jpg"alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Capacitaciones</h4>
                     </div>
                 </div>
                 <div class="cont-work manejo">
                     <div class="img-work">
-                        <img src="img/manejo1.png"alt="">
+                        <img src="img/arnes.jpg"alt="">
                     </div>
                     <div class="textos-work">
                         <h4>Uso y manejo de equipos</h4>
@@ -165,7 +162,7 @@
                 </div>
                 <div class="cont-work manejo">
                     <div class="img-work">
-                        <img src="img/manejo2.png"alt="">
+                        <img src="img/maquinaria.jpg"alt="">
                     </div>
                     <div class="textos-work">
                         <h4>Uso y manejo de equipos</h4>
@@ -173,7 +170,7 @@
                 </div>
                 <div class="cont-work manejo">
                     <div class="img-work">
-                        <img src="img/manejo3.png"alt="">
+                        <img src="img/montacargas.jpg"alt="">
                     </div>
                     <div class="textos-work">
                         <h4>Uso y manejo de equipos</h4>
@@ -197,7 +194,7 @@
        </div>
    </footer>
    <script src="js/main.js"></script>
-   <script src="js/jquery.js"></script>
+   <script src="js/jquery-3.6.0.min.js"></script>
    <script src="js/filtro.js"></script>
 </body>
 </html>

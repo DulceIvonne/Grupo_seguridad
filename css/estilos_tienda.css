@@ -1,0 +1,267 @@
+/* Estilos */
+	:root{           /*Variable de color de la cabecera*/
+		--main-header-color: linear-gradient(45deg,#fff,#022859,#09A603,#F20505);
+		--main-red: #09A603;
+	}
+	body,html{
+		margin: 0;
+		padding: 0;
+		 /*Color de fondo*/
+	}
+	body{
+		background-color: #f3f3f3;
+	}
+	header{
+		height: 40px;             /*40*/
+		padding: 10px;
+		width: calc(100% - 20px); /*Exacto un 100% ancho de la pantalla*/
+		line-height: 40px;        /*Linea de alto*/
+		display: flex;            /*Todos queden en una sola fila*/
+		background: var(--main-header-color);   /*Variable que se definió arriba*/
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.logo-place{        /*Imagen que se definio*/
+		width: 110px;   /*150*/
+		justify-content: center;  /*Centrar*/
+		align-items: center;
+		margin-top: 7px ;/*Alinie verticalmente*/
+	}
+	.logo-place img{    /*Propiedades, ancho de la imagen*/
+		width: 100%;    
+	}
+	.search-place{      /*Buscar*/
+		width: calc(100% - 440px) ;
+		display: flex;
+		padding: 0px 20px;
+
+	}
+	input{   
+		padding: 10px;
+		font-size: 15px;
+		background-color: #fefefe;
+		border: 1px solid #ccc;
+		width: calc(100% - 62px);
+		font-family:'Poppins', sans-serif;
+	}
+	input:placeholder{   /*Seudo clase buscar lo que necesita*/
+		color: #ccc;
+	}
+
+	.search-place input{   /*Recuadro de buscar*/
+		padding: 10px;
+		font-size: 15px;
+		background-color: #fefefe;
+		border: 1px solid #ccc;
+		width: calc(100% - 62px);
+		font-family:'Poppins', sans-serif;
+		
+	}
+	.search-place input:placeholder{   /*Seudo clase buscar lo que necesita*/
+		color: #ccc;
+	}
+	.btn-main{                         /*Boton de buscar diseño y tamaño de fuente*/
+		padding: 10px;
+		font-size:15px ;
+		background-color: #fefefe;
+		border-style: none;
+		border: 1px solid #ccc;
+		cursor: pointer;
+	}
+	.btn-search{
+		width: 40px;
+		color: #F20505;
+
+	}
+	.options-place{
+		width: 250px;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.item-option{            /*Iconos de registro*/
+		padding: 5px 10px;   /*Arriba de 5 y a los lados de 10*/
+		line-height: 30px;   /*Ancho de linea distancia de iconos*/
+		font-size: 30px;     /*Tamaño de fuente*/
+		cursor: pointer;     /*Puntero*/
+		color: #fff;         /*Color blanco iconos*/
+		font-family:'Poppins', sans-serif;
+		display: flex;
+	
+	}
+	.item-option p{
+		font-size: 15px;
+		margin: 0;
+		margin-left: 5px;
+	}
+	.main-content{           /*Contenedor*/
+		margin-top: 60px;
+		width: 100%;
+		font-family:'Poppins', sans-serif;
+		color: #000; 
+	}
+	.content-page{                 /*Los margenes los centre a la mitad de la ventana*/
+		margin: auto;
+		padding: 10px;
+		width: calc(100% - 20px); 
+		max-width: 1180px;         /*Máximo ancho*/
+		background: #e3e3e3;
+	}
+	.content-page section{
+		display: flex;
+		background: #FFF;
+	}
+
+	.part1{
+		padding:5px ;
+		width:calc(60% - 10px) ;
+	}
+	.part2{
+		padding:5px ;
+		width:calc(40% - 10px) ;
+		margin: 20px 0;
+	}
+
+	.part1 img{
+		width: 100%;
+	}
+	.part2 *{
+		margin: 10px 0;
+		font-family: 'Poppins', sans-serif;               /*Color de los textos, titlo precio*/
+	}
+	.part2 h2 {                    /*Color del precio*/
+		color: #0E1373;	
+		font-size: 30px;
+	}
+	.part2 h1{
+		color:#F20505 ;
+		font-size: 45px;
+	}    
+	.part2 h1 span{               /*Color de centavos*/
+		color: #F20505;
+		font-size: 30px;
+	} 
+	.part2 h3{
+		font-weight: normal;
+		color:#078C03;
+	}  
+	button{                    /*Botón de comprar*/
+		border-style: none;
+		border-radius: 15px;
+		padding: 13px 20px;
+		color: #fff;
+		background: #F20505;
+		cursor: pointer;
+		font-size: 16px;
+
+	}               
+	.title-section{                /*Secciones productos destacados*/
+		padding: 10px 0;
+		font-size: 20px;
+		color: #F20505;
+	}
+	.products-list{                /*Acomode los productos*/
+		display: table;
+		width: 100%;
+	}
+	.product-box{          
+		display:inline-table;      /*Agregue a lado de otro acomode como si fuera una tabla*/
+		padding: 10px;
+		width: calc(100%/5 - 20px); 
+	}
+	.product-box a{                /*Las características letras precio,descripcion*/
+		text-decoration: none;
+	}
+	.product{                      /*Content donde muestra la imagen y descripcion*/
+		width: 100%;
+		border-radius: 10px;
+		box-shadow: 0 0 8px 3px #ccc;  /*Sombra*/
+		background-color: #fff;
+	}
+
+	.product img{                      /*La imagen de productos se acomode*/
+		width: 100%;
+		border-radius: 10px 10px 0 0;  /*Borde donde se presenta la imagen*/
+	} 
+	.detail-title{
+		text-align: center;
+		font-size: 18px;
+		color: #022859;
+		padding: 5px;
+		width: calc(100% - 10px);
+		height: 35px;
+
+	}  
+	.detail-description{
+		text-align: center;
+		font-size: 18px;
+		color: #09A603;
+		padding: 5px;
+		width: calc(100% - 10px);
+		height: 34px;
+		
+	}        
+	.detail-price{
+		text-align: center;
+		font-size: 18px;
+		color: #F20505;
+		padding: 5px;
+		width: calc(100% - 10px);
+	} 
+	.detail-price span{   /*Centavos*/
+		font-size: 15px;
+	} 
+	a{
+		color: #fff;
+	}
+	.body-pedidos{
+		width: 100%;
+	}
+	.item-pedido{
+		display: flex;
+		border: 1px #ccc solid;
+	    margin-bottom: 5px;
+	    background: #fff;
+	}
+	.pedido-img{
+		width: 200px;
+	}
+	.pedido-img img{
+		width: 100%;
+	}
+	.pedido-detalle{
+		padding: 10px;
+		width:calc(100% - 220px);
+	
+	}
+	.pedido-detalle h3,
+	.pedido-detalle p{
+		margin: 5px 0;
+	}
+	.ipt-procom{
+		width: 250px;
+		margin-bottom: 5px;
+	}
+	.p-line{
+		display: flex;
+	}
+	.p-line div{
+		width: 150px;
+		font-weight: 600;
+	}
+	.metodo pago{
+		display: flex;
+		width: 100%;
+	}
+	input[type="radio"]{
+		width: 20px;
+		height: 20px;
+		margin: 0 5px 5px 5px;
+	}
+	.metodo pago label{
+		width: calc(100% - 30px);
+	}
+	.content-page h4{
+		margin: 5px 0;
+	}
