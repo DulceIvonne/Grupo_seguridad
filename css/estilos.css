@@ -212,10 +212,13 @@ nav .enlaces a:hover{
 .modal__title{
   font-size: 2 rem;
   text-align: center;
+  color: #fff;
 }
 .modal__paragraph{
   margin-bottom: 10px;
   text-align: justify;
+  color: black;
+
 }
 .modal__img{
   width: 90%;
@@ -224,7 +227,7 @@ nav .enlaces a:hover{
 .modal__close{
   text-decoration: none;
   color: #fff;
-  background-color:#022859;
+  background-color:#2680f3;
   padding: 1em 3em;
   border: 1px solid;
   border-radius: 6px;
@@ -234,9 +237,7 @@ nav .enlaces a:hover{
 }
 .modal__close:hover{
   color: #fff;
- 
   background-color:#F53A08; 
-
 }
 
 .contenedor h3{

@@ -44,7 +44,7 @@
             <div class="modal__container">
                 <img src="img/modal.svg" class="modal__img">
                 <h2 class="modal__title">¡Bienvenido a Grupo 4 IO Seguridad Industrial!</h2>
-                <p class="modal__paragraph">Somos líderes en soluciones de capacitación y de formación para tu personal en el área de SEGURIDAD, SALUD y MEDIO AMBIENTE, ya que nuestros cursos se encuentran en constante innovación con base a la realidad empresarial y las normas oficiales mexicanas.</p>
+                <p class="modal__paragraph"><b>Somos líderes en soluciones de capacitación y de formación para tu personal en el área de SEGURIDAD, SALUD y MEDIO AMBIENTE, ya que nuestros cursos se encuentran en constante innovación con base a la realidad empresarial y las normas oficiales mexicanas.</b></p>
                 <a href="#" class="modal__close">Cerrar</a>
             </div>
         </section>
