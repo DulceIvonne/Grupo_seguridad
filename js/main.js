@@ -76,3 +76,19 @@ abrir.addEventListener('click', function(){
     apertura();
 
 });
+//Modal
+const openModal = document.querySelector('.hero__cta'); //Traerme o guardar en esta variable 
+const modal = document.querySelector('.modal');//Abra el modal
+const closeModal = document.querySelector('.modal__close');//Cerrar el modal
+
+openModal.addEventListener('click',(e)=>{//Cuando open Modal tenga un evento de tipo click se ejecute esa funcion agregar un parametro el comportamiento por defecto
+    e.preventDefault();
+    modal.classList.add('modal--show'); //Den clic en modal entre  sus clases y agregue a la clase modal show
+   
+});
+
+closeModal.addEventListener('click',(e)=>{
+    e.preventDefault();
+    modal.classList.remove('modal--show'); //Den clic en modal entre  sus clases y agregue a la clase modal show
+   
+});

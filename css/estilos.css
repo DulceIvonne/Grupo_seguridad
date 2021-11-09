@@ -171,6 +171,73 @@ nav .enlaces a:hover{
   text-align: center;
   overflow: hidden;
 }
+.modal{
+  position: fixed; /*Se fije a la pantalla*/
+  top:  0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s .9s;
+  --transform: translateY(-100vh);
+  --transition: transform .8s;
+}
+.modal--show{ /*Manera de nombrar a las clases en css*/
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity .6s;
+  --transform: translateY(0);
+  --transition: transform .8s .8s;
+
+}
+.modal__container{
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color:#468c32;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em; /*Se separen las letras*/
+  place-items: center ; 
+  grid-auto-colums:  100%;
+  transform: var(--transform);
+  transition: var(--transition);
+
+}
+.modal__title{
+  font-size: 2 rem;
+  text-align: center;
+}
+.modal__paragraph{
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.modal__img{
+  width: 90%;
+  max-width: 300px;
+}
+.modal__close{
+  text-decoration: none;
+  color: #fff;
+  background-color:#022859;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color .3s;
+}
+.modal__close:hover{
+  color: #fff;
+ 
+  background-color:#F53A08; 
+
+}
 
 .contenedor h3{
   font-size: var(--titulos);
@@ -409,6 +476,13 @@ footer p{
 
   .iconos{
     margin: auto;
+  }
+  .modal__container{
+    padding: 2em 1.5em;
+  }
+
+  .modal__title{
+    font-size: 2rem;
   }
 }
 

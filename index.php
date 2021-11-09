@@ -20,6 +20,7 @@
                     </div>
                     <div class="enlaces" id="enlaces">
                         <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                        <a href="#" class="hero__cta">Conocenos</a>
                         <a href="#" id="enlace-acerca" class="btn-header">Acerca de</a>
                         <a href="#" id="enlace-servicios" class="btn-header">Servicio</a>
                         <a href="#" id="enlace-trabajo" class="btn-header">Trabajo</a>
@@ -38,6 +39,16 @@
                 <h2>Empresa 100% Mexicana, dedicada a la capacitación en Seguridad Industrial</h2>
             </div>
         </header>
+
+        <section class="modal ">
+            <div class="modal__container">
+                <img src="img/modal.svg" class="modal__img">
+                <h2 class="modal__title">¡Bienvenido a Grupo 4 IO Seguridad Industrial!</h2>
+                <p class="modal__paragraph">Somos líderes en soluciones de capacitación y de formación para tu personal en el área de SEGURIDAD, SALUD y MEDIO AMBIENTE, ya que nuestros cursos se encuentran en constante innovación con base a la realidad empresarial y las normas oficiales mexicanas.</p>
+                <a href="#" class="modal__close">Cerrar</a>
+            </div>
+        </section>
+
         <main>
             <section class="team contenedor" id="acerca">
                 <h3>Acerca de nosotros</h3>
