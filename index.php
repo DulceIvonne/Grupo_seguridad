@@ -11,36 +11,37 @@
 <body class="hidden">
     <div class="centrado" id="onload">
     <div class="lds-facebook"><div></div><div></div><div></div></div>
-        </div>
-        <header>
-            <nav id="nav" class="nav1">
-                <div class="contenedor-nav">
-                    <div class="logo">
-                        <img src="img/logo1.png" alt="">
-                    </div>
-                    <div class="enlaces" id="enlaces">
-                        <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
-                        <a href="#" class="hero__cta">Conocenos</a>
-                        <a href="#" id="enlace-acerca" class="btn-header">Acerca de</a>
-                        <a href="#" id="enlace-servicios" class="btn-header">Servicio</a>
-                        <a href="#" id="enlace-trabajo" class="btn-header">Trabajo</a>
-                        <a href="#" id="enlace-cursos" class="btn-header">Curso</a>
-                        <a href="tienda.php" id="enlace-tienda" class="btn-header">Tienda</a>
-                        <a href="#" id="enlace-contacto" class="btn-header">Redes Sociales</a>
-                        <a href="login.php" id="enlace-contacto" class="btn-header">Cuenta</a>
-                </div>
-                <div class="icono" id="open">
-                    <span>&#9776;</span>
-                </div>
+     </div>
+     <header>
+         <nav id="nav" class="nav1">
+             <div class="contenedor-nav">
+                 <div class="logo">
+                     <img src="img/logo1.png" alt="">
+                 </div>
+                 <div class="enlaces" id="enlaces">
+                     <a href="#" id="enlace-acerca" class="btn-header">Acerca de</a>
+                     <a href="#" id="enlace-servicios" class="btn-header">Servicio</a>
+                     <a href="#" id="enlace-trabajo" class="btn-header">Trabajo</a>
+                     <a href="cursos.php" id="enlace-cursos" class="btn-header">Cursos</a>
+                     <a href="#" id="enlace-contacto" class="btn-header">Redes Sociales</a>
+                     <a href="login.php" id="enlace-contacto" class="btn-header"><p class="fas fa-user"></p></a>
+             </div>
+            
             </div>
-            </nav>
-            <div class="textos">
-                <h1>Grupo 4 IO Seguridad Industrial</h1>
-                <h2>Empresa 100% Mexicana, dedicada a la capacitación en Seguridad Industrial</h2>
-            </div>
-        </header>
+         </nav>
+         <div class="textos"> <br><br><br><br><br><br><br>
+             <h1>Grupo 4 IO Seguridad Industrial</h1>
+             <h2>Empresa 100% Mexicana, dedicada a la capacitación en Seguridad Industrial</h2>
+             <br>
+             <br>
+             <br>
+             <br>
+             <a href="#" id="btn-1" class="hero__cta">¡Conócenos!</a>
+         </div>
+     </header>
 
-        <section class="modal ">
+
+     <section class="modal">
             <div class="modal__container">
                 <img src="img/modal.svg" class="modal__img">
                 <h2 class="modal__title">¡Bienvenido a Grupo 4 IO Seguridad Industrial!</h2>
@@ -49,10 +50,27 @@
             </div>
         </section>
 
+
+        <Section >
+            <div class="modal_con"></div>
+        </Section>
         <main>
-            <section class="team contenedor" id="acerca">
-                <h3>Acerca de nosotros</h3>
-                <p class="after">Capacitate con la mejor Empresa</p>
+            <section class="team contenedor" id="acerca"> 
+                <table>
+                   <tr>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                       <td><a href="#" id="btn-2" class="">Misión</a></td>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>Acerca de nosotros</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                       <td><a href="#" id="btn-2" class="">Visión</a></td>
+                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                   </tr>
+                </table>
+                <p class="after">Capacitate con la mejor empresa en seguridad industrial, salud laboral y medio ambiente industrial</p>
                 <div class="card">
                     <div class="content-card">
                         <div class="people">
@@ -91,14 +109,20 @@
                      <div class="caja-servicios">
                          <img src="img/Chaleco_4IO.png" alt="">
                          <h4>Detección de riesgos laborales</h4>
+                         <p>Capacita a tu personal para prevenir</p>
+                         <p> los accidentes</p>
                      </div>
                      <div class="caja-servicios">
                         <img src="img/Asesoria_4IO.png" alt="">
                         <h4>Asesoría técnica en seguridad, salud y medio ambiente</h4>
+                        <p>Puedes adquirir certificados en</p>
+                        <p>base a la capacitación que se desea</p>
                     </div>
                     <div class="caja-servicios">
                         <img src="img/Cursos_4IO.png" alt="">
                         <h4>Cursos de capacitación</h4>
+                        <p>En el área de cursos puedes acceder al</p>
+                        <p> que se desea de manera especifica</p>
                     </div>
                  </div>
              </div>
@@ -195,13 +219,18 @@
            <div class="marca-logo">
                <img src="img/logoprincipal.png">
            </div>
-           <div class="iconos">
-               <i class="fab fa-facebook-square"></i>
-               <i class="fab fa-instagram-square"></i>
-               <i class="fab fa-twitter-square"></i>
-               <i class="fab fa-linkedin"></i>
-           </div>
-           <p>Seguridad y asesoramiento industrial</p>
+           <p>Calle Acatipan #3 Int. 3. Col. Vicente Guerrero. C.D Sahagún, Hgo.</p>
+                   <div class="text-muted"><b>Copyright &copy; GRUPO 4 IO SEGURIDAD INDUSTRIAL </b></div>
+                            <div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/oberdanhc"><i class="fab fa-twitter-square"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="contac" href="tel:7751301633"><p class="fas fa-address-book">&nbsp;&nbsp;Comunícate:</p> 775-130-1633</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href= "https://www.linkedin.com/in/grupo-4-io-seguridad-industrial-dc-5-stps-5696a21a/?originalSubdomain=mx"><i class="fab fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               <b>&middot;</b>
+                               <a class="contac" href="mailto:grupo4io.seguridad@gmail.com"><p class="fas fa-envelope">&nbsp;&nbsp;Correo:</p>grupo4io.seguridad@gmail.com</a>
+                               <b>&middot;</b>
+                                <!--<a href="#">Terms &amp; Conditions</a>-->
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://web.facebook.com/GRUPO-4-IO-Seguridad-Industrial-105576114353693/"><i class="fab fa-facebook-square"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
        </div>
    </footer>
    <script src="js/main.js"></script>

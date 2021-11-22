@@ -11659,6 +11659,8 @@ body {
   width: 100%;
   padding-right: 1rem;
 }
+.logo, .logo img{ height: 30px;
+width: 20px;}
 
 .dataTable-sorter::before,
 .dataTable-sorter::after {
