@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
+     <!-- Materialize.css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+    <!-- CSS Estilos -->
+    <link rel="stylesheet" href="css/carrusel/estilos.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
@@ -12,7 +17,6 @@
     <div class="centrado" id="onload">
     <div class="lds-facebook"><div></div><div></div><div></div></div>
      </div>
-     <header>
          <nav id="nav" class="nav1">
              <div class="contenedor-nav">
                  <div class="logo">
@@ -21,16 +25,56 @@
                  <div class="enlaces" id="enlaces">
                  <a href="login.php" id="enlace-contacto" class="btn-header"><p class="fas fa-user"></p></a>
                      <a href="index.php" id="enlace-inicio" class="btn-header"><p class="fas fa-home fa-fw"></p>&nbsp;Inicio</a>
-                     <a href="usuario.php" id="enlace-acerca" class="btn-header"><p class="fas fa-cart-plus fa-fw"></p>&nbsp;Pedidos &nbsp;<span class="badge">0</span></a>
+                     <a href="usuario.php" id="enlace-acerca" class="btn-header"><p class="fas fa-cart-plus fa-fw"></p>&nbsp;Pedidos <span class="span">0</span></a>
              </div>
             
             </div>
          </nav>
          <div class="textos">
-             <h1>Grupo 4 IO Seguridad Industrial</h1>
+         <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3 class="center-align titulo">-</h3>
+                <div class="carousel center-align">
+                    <div class="carousel-item">
+                    <img src="./img/cap1.gif" width="400" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Cursos</h2>
+                        <div class= "linea-division"></div>
+                        <p class="tit">Precausión</p>          
+                        <img src="./img/curso.png" width="400" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Material</h2>
+                        <div class= "linea-division"></div>
+                        <p class="tit">Guías</p>          
+                        <img src="./img/curso1.png" width="400" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"></h2>     
+                        <img src="./img/gif.png" width="400" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">  
+                    <h2 class="subtitulo">PÓKER</h2>
+                        <div class="linea-division"></div>
+                        <p class="tit">Seguridad</p>
+                        <img src="img/poker.png" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">        
+                        <img src="./img/eq.png" width="400" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
             
          </div>
-     </header>
      <main>
          <section class="team contenedor" id="acerca">
              <h3>Cursos</h3>
@@ -53,6 +97,11 @@
                  </div>
         </section>     
      </main>
+    
+                <h3 class="center-align titulo2"><b>Empresas con las que hemos trabajado</b></h3> 
+                <!--<img id="empresas"src="./img/logo1.png" width="150px" height="75px" alt="">-->
+                <img id="empresas"src="./img/GRUPO 4 IO SEGURIDAD INDUSTRIAL (3).gif" width="100%" height="820s%" alt="">
+   
      <footer id ="contacto">
        <div class="footer contenedor">
            <div class="marca-logo">
@@ -80,5 +129,10 @@
    <script src="js/main.js"></script>
    <script src="js/jquery.js"></script>
    <script src="js/filtro.js"></script>
+   <!-- Materialize.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- JS Main -->
+    <script src="js/carrusel/main.js"></script>
 </body>
 </html>

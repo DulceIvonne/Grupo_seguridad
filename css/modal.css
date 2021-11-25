@@ -1,0 +1,94 @@
+ .modal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-modal:checked ~ .modal{
+    opacity: 1;
+    visibility: visible;
+}
+.contene{
+    width: 900px;
+    height: 550px;
+    margin: auto;
+    background: rgb(35, 136, 1);
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    transition: all 500ms ease;
+    opacity: 90%;
+    position: relative;
+    transform: translateY(-30%);
+}
+#btn-modal:checked ~ .modal .contene{
+    transform: translateY(0%);
+}
+.contene .head{
+    padding: 20px;
+    background: rgb(211, 2, 2);
+    opacity: 90%;
+}
+
+/*.lb{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.lb:hover{
+    background-color: gray;
+    color: red;
+}*/
+.contene label{
+ text-decoration: none;
+ width: 50px;
+ height: 50px;
+ position: absolute;
+ right: -20px;
+ top: -20px;
+ padding: 20px;
+ font-size: 15px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ background: black;
+ color: white;
+ border-radius: 50%;
+ line-height: 10px;
+ cursor: pointer;
+ opacity: 83%;
+}
+
+#btn-modal{
+    display: none;
+}
+.lbl-modal{
+    border: 3px solid #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    font-weight:600;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    background: linear-gradient(to bottom,
+    rgba(30, 33, 209, 0.6),
+    rgba(29, 173, 29, 0.6),
+    rgba(254, 0, 10, 0.708l)
+    ),
+}
+.lbl-modal:hover{
+    color: blue;
+    background-color: cornsilk;
+}
+

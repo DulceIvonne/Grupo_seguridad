@@ -37,31 +37,7 @@ body{
   color: #ffffff;
 }
 
-#btn-1{
-    border: 3px solid #ffffff;
-    text-decoration: none;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #ffffff;
-    background: linear-gradient(to bottom,
-    rgba(30, 33, 209, 0.6),
-    rgba(29, 173, 29, 0.6),
-    rgba(254, 0, 10, 0.781)
-    ),
-  
-    
-    /*
-    background-color:#F53A08; 
-    border-radius: 6px;
-      color: #ffffff;
-    background-color: #030664;
-    border: 2px solid #0016b0;*/
-  }
-  #btn-1:hover{
-    color: #183eba;
-    background-color: #ffffff;
-  }
+
 
  #tit{
   font-family: "Candara";

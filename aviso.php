@@ -58,7 +58,7 @@ Cabe mencionar que, GRUPO 4 IO SEGURIDAD INDUSTRIAL, entenderá que el titular h
             <tr>
                 <div id="tit">MODIFICACIONES AL AVISO DE PRIVACIDAD:</div>
                <div id="av"> Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad atendiendo a novedades legislativas, políticas internas o nuevos requerimientos para la prestación u ofrecimiento de nuestros servicios o productos. El presente Aviso aplica para todos los servicios de GRUPO 4 IO SEGURIDAD INDUSTRIAL.</div> 
-            </tr>89uy8777
+            </tr>
         </td>
     </table>
     </section>     

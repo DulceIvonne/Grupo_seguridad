@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo 4IO Seguridad Industrial</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body class="hidden">
@@ -36,19 +37,26 @@
              <br>
              <br>
              <br>
-             <a href="#" id="btn-1" class="hero__cta">¡Conócenos!</a>
+             <input type="checkbox" id="btn-modal" >
+               <label for="btn-modal" class="lbl-modal">¡Conócenos!</label>
+               <div class="modal">
+                <div class="contene">
+                    <div class="head"> </div> 
+                    <label for="btn-modal">X</label>
+                    <img src="img/¡BIENVENIDO!.gif"  width="75%" height="509s%">
+                </div>
+            </div>
          </div>
      </header>
-
-
-     <section class="modal">
+     <!--<a href="#" id="btn-1" class="hero__cta">¡Conócenos!</a>
+         <section class="modal">
             <div class="modal__container">
                 <img src="img/modal.svg" class="modal__img">
                 <h2 class="modal__title">¡Bienvenido a Grupo 4 IO Seguridad Industrial!</h2>
                 <p class="modal__paragraph"><b>Somos líderes en soluciones de capacitación y de formación para tu personal en el área de SEGURIDAD, SALUD y MEDIO AMBIENTE, ya que nuestros cursos se encuentran en constante innovación con base a la realidad empresarial y las normas oficiales mexicanas.</b></p>
                 <a href="#" class="modal__close">Cerrar</a>
             </div>
-        </section>
+        </section>-->
 
 
         <Section >
