@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require 'php/bd.php';
 
     if(!isset($_SESSION['id']))
     {
@@ -8,6 +9,22 @@
 
     $nombre = $_SESSION['nombre'];
     $tipo_usuario =$_SESSION['tipo_usuario'];
+
+    $id = $_SESSION['id'];
+    $tipo_usuario = $_SESSION['tipo_usuario'];
+
+    if($tipo_usuario ==1)
+    {
+        $where ="";
+    }
+    else if ($tipo_usuario ==2)
+    {
+        $where ="WHERE id=$id";
+    }
+
+    $sql = "SELECT * FROM cursosa $where";
+
+    $resultado= $mysqli->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -18,18 +35,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Área del Admin</title>
+        <title>Area del Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3">Menú</a>
+            <a class="navbar-brand ps-3" href="admin.php">Area del Administrador</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="img-log" src="img/minlog.png" align="center" alt="">
+            <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
                     <?php echo $nombre; ?>
@@ -52,67 +71,30 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">USUARIOS</div>
+                            <div class="sb-sidenav-menu-heading">Admin</div>
                             <a class="nav-link" href="admin.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Gestión de usuarios
+                                Area de cursos en linea
                             </a>
-                            <?php if($tipo_usuario== 1) { ?>
-                            <div class="sb-sidenav-menu-heading">CURSOS</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Pedidos
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="pedidos.php">Pedidos realizados</a>
-                                   <!-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>-->
-                                </nav>
-                            </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Cursos
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            <?php if($tipo_usuario== 1) 
+                            { ?>
+                            <div class="sb-sidenav-menu-heading">Acciones</div>
+                            <a class="nav-link" href="php/RegistroA.php">
+                                <div class="fas fa-user fa-fw"><i class="fas fa-table"></i></div>
+                                Registrar nuevos Admin
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Gestión de cursos
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="crear.php">Crear</a>
-                                            <a class="nav-link" href="crud.php">Administrar</a>
-                                           <!-- <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav>
-                                    </div>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>-->
-                                        </nav>
-                                    </div>
-                                </nav>
-                            </div><br><br><br><br><br>
-                            <?php } ?>
-                            <!--<div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
+                            </div>
+
+                            <?php 
+                            } ?>
+                            <div class="sb-sidenav-menu-heading">Gestion</div>
                             <a class="nav-link" href="php/tablas.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                                <div class="fas fa-user fa-fw""><i class="fas fa-table"></i></div>
+                                Usuarios activos
                             </a>
                         </div>
-                    </div>-->
+                    </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Has iniciado session como:</div>
                         <?php echo $nombre; ?>
@@ -122,96 +104,177 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Control de Usuarios</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Administración de usuarios: <i>Sólo personal autorizado</i></li>
-                        </ol>
-                        <!--<div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        <h1 class="mt-4">Tabla de cursos</h1>
+
+                        <!-- Button trigger modal -->
+                        <button  type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#modelId">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/></svg>
+                            Agregar un nuevo curso
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    
+                                <div class="modal-header">
+                                            <h5 class="modal-title">Agrega un nuevo curso</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
+
+                            <form action="php/insertar.php" method="post">
+                                
+                                <label for="nombre" class="form-label"> ID: </label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="Number" class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Ingresa el ID">
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
+
+                                <label for="nombre" class="form-label"> Fecha de registro :</label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="fecharegistro" id="fecharegistro" aria-describedby="helpId" placeholder="Ingresa la fecha">
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
+
+                                <label for="nombre" class="form-label"> Programa o curso: </label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="cursos" id="cursos" aria-describedby="helpId" placeholder="Ingresa el programa o curso">
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
+
+                                <label for="nombre" class="form-label"> Area tematica: </label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="areatematica" id="areatematica" aria-describedby="helpId" placeholder="Ingresa el area tematica">
+                                </div>
+
+                                <label for="nombre" class="form-label"> Duracion en Horas:</label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="duracionhrs" id="duracionhrs" aria-describedby="helpId" placeholder="Ingresa la duracion">
+                                </div>
+
+                                <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                                            Cerrar
+                                        </button>
+                                        <button type="submit" href="/php/insertar.php" class="btn btn-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/></svg>
+                                            Agregar el curso
+                                        </button>
+                                </div>
+                                
+                            </form>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        Area Chart Example
-                                    </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
-                                        Bar Chart Example
-                                    </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                        </div>-->
-                        <div class="card mb-4">
+
+                    <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                               Alta de usuarios
+                                Cursos activos en base de datos
                             </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                <main>
-         <section class="team contenedor" id="acerca">
-             <h3>Administradores de la página web</h3>
-             <div class="botones-work">
-                 <?php 
-                 
-                    echo 'Zona de administración';
-                 
-                 ?>
-             </div>
-             <div class="galeria-work">
-                 <div class="cont-work equipo">
-                     <div class="img-work">
-                         
-                     </div>
-                     <div class="textos-work">
-                       <button class="btn-warning">Comenzar a gestionar<i class="fas fa-bags-shopping"></i></button>
-                     </div>
-                 </div>
-        </section>     
-     </main>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Fecha de registro</th>
+                                        <th>Programa o cursos</th>
+                                        <th>Area tematica</th>
+                                        <th>Duracion en horas</th>
+                                        <th> Actualizar</th>
+                                        <th> Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <?php while($row = $resultado-> fetch_assoc())
+                                    {?>
+                                    <tr>
+
+                                        <td> <?php echo $row['id']; ?></td>
+                                        <td> <?php echo $row['fecharegistro']; ?></td>
+                                        <td> <?php echo $row['cursos']; ?></td>
+                                        <td> <?php echo $row['areatematica']; ?></td>
+                                        <td> <?php echo $row['duracionhrs']; ?></td>
+                                        <td>    
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-warning btn-lg bi bi-pencil" data-bs-toggle="modal" data-bs-target="#modelIda">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/></svg>
+                            Actualizar
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modelIda" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Actualiza el curso</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <form method="post">
+                                
+                                <label for="nombre" class="form-label"> ID: </label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="Number" class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Ingresa el ID">
+                                </div>
+
+                                <label for="nombre" class="form-label"> Fecha de registro :</label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="fecharegistro" id="fecharegistro" aria-describedby="helpId" placeholder="Ingresa la fecha">
+                                </div>
+
+                                <label for="nombre" class="form-label"> Programa o curso: </label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="cursos" id="cursos" aria-describedby="helpId" placeholder="Ingresa el programa o curso">
+                                </div>
+
+                                <label for="nombre" class="form-label"> Area tematica: </label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="areatematica" id="areatematica" aria-describedby="helpId" placeholder="Ingresa el area tematica">
+                                </div>
+
+                                <label for="nombre" class="form-label"> Duracion en Horas:</label>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" name="duracionhrs" id="duracionhrs" aria-describedby="helpId" placeholder="Ingresa la duracion">
+                                </div>
+
+                                <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                                            Cerrar
+                                        </button>
+
+                                        <button type="submit" href="/php/actualizar.php" class="btn btn-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/></svg>
+                                            Actualiza el curso :D
+                                        </button>
+                                </div>
+                                
+                            </form>
+                                        </td> 
+
+                                        <td> 
+                                            <a href="php/eliminar.php? id=<?php echo $row['id']; ?>" class="btn btn-danger btn-lg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg>
+                                                Eliminar
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                    </form>
+                                    <?php 
+                                    } ?>  
+                                    </tr>
+                                </tbody>
                                 </table>
                             </div>
                         </div>
@@ -233,5 +296,7 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
+
+        
     </body>
 </html>

@@ -14,6 +14,7 @@
     <div class="lds-facebook"><div></div><div></div><div></div></div>
      </div>
      <header>
+           
          <nav id="nav" class="nav1">
              <div class="contenedor-nav">
                  <div class="logo">
@@ -79,6 +80,7 @@
                    </tr>
                 </table>
                 <p class="after">Capacitate con la mejor empresa en seguridad industrial, salud laboral y medio ambiente industrial</p>
+                
                 <div class="card">
                     <div class="content-card">
                         <div class="people">
